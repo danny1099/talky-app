@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { globalFont } from '@/config/fonts'
+import { ServerProviders, ClientProviders } from '@/lib/providers'
 import '@/globals.css'
 
 interface Props extends Children {
@@ -9,7 +10,11 @@ interface Props extends Children {
 export default function RootLayout({ children, params: { lang } }: Readonly<Props>) {
   return (
     <html lang={lang}>
-      <body className={`antialiased min-h-screen ${globalFont.className}`}>{children}</body>
+      <body className={`antialiased min-h-screen ${globalFont.className}`}>
+        <ServerProviders>
+          <ClientProviders>{children}</ClientProviders>
+        </ServerProviders>
+      </body>
     </html>
   )
 }
