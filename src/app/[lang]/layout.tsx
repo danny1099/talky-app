@@ -9,7 +9,7 @@ interface Props extends Children {
 
 export default function RootLayout({ children, params: { lang } }: Readonly<Props>) {
   return (
-    <html lang={lang}>
+    <html lang={lang} suppressHydrationWarning>
       <body className={`antialiased min-h-screen ${globalFont.className}`}>
         <ServerProviders>
           <ClientProviders>{children}</ClientProviders>

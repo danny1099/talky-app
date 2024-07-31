@@ -5,7 +5,7 @@ interface Props {
   className?: string
 }
 
-export const Icon = ({ icon, className = 'size-5' }: Props) => {
+export const Icon = ({ icon, className = 'size-4' }: Props) => {
   return (
     <svg className={cn('bi', className)} fill="currentColor">
       <use xlinkHref={`/images/icons_sprite.svg#${icon}`} />

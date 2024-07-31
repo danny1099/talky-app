@@ -1,3 +1,10 @@
-export const Layout = ({ children }: Children) => {
-  return <>{children}</>
+import { Navbar } from '@/modules/common/components'
+
+export default function Layout({ children }: Children) {
+  return (
+    <>
+      <Navbar />
+      {children}
+    </>
+  )
 }
