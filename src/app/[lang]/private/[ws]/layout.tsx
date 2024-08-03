@@ -4,7 +4,7 @@ export default function Layout({ children }: Children) {
   return (
     <>
       <Navbar />
-      {children}
+      <main className="h-[calc(100dvh-64px)] flex flex-col bg-white">{children}</main>
     </>
   )
 }

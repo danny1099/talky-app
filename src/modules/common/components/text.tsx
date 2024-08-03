@@ -6,9 +6,9 @@ interface Props extends React.HTMLAttributes<HTMLHeadingElement> {
 }
 
 /* prettier-ignore */
-export const Paragraph = ({ text, ...props }: Props) => {
+export const Text = ({ text, ...props }: Props) => {
   return (
-    <p {...props} className={cn('text-xs text-zinc-600',globalFont.className, props.className)}>
+    <p {...props} className={cn('text-xs text-zinc-500',globalFont.className, props.className)}>
       {text}
     </p>
   )

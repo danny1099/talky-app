@@ -7,7 +7,7 @@ interface Props extends React.HTMLAttributes<HTMLHeadingElement> {}
 export const Brand = ({ ...props }: Props) => {
   return (
     <h2 {...props} className={cn(`${brandFont.className} text-2xl font-medium`, props.className)}>
-      t<span className="text-blue-500">a</span>lky
+      t<span className="text-blue-600">a</span>lky
     </h2>
   )
 }
