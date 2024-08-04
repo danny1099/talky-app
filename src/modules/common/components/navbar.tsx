@@ -1,4 +1,4 @@
-import { Avatar, Logo, Icon } from '@/modules/common/components'
+import { Avatar, Logo, Icon, ThemeToggle } from '@/modules/common/components'
 
 export const Navbar = () => {
   return (
@@ -6,9 +6,8 @@ export const Navbar = () => {
       <Logo />
 
       <nav className="h-full flex flex-row items-center gap-x-4 px-[2px] md:gap-x-6">
-        <Icon icon="search" />
         <Icon icon="translate" />
-        <Icon icon="sun" />
+        <ThemeToggle />
         <Avatar text="DM" src="/images/img-avatar.png" />
       </nav>
     </header>

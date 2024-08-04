@@ -28,6 +28,11 @@ const config: Config = {
         destructive: {
           DEFAULT: 'var(--destructive)',
           foreground: 'var(--destructive-foreground)'
+        },
+        wine: {
+          '100': '#1d0e33',
+          '200': '#300e33',
+          '300': '#330e24'
         }
       }
     }
