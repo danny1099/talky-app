@@ -14,7 +14,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="w-full relative">
         {icon && (
-          <div className={cn('absolute top-1/2 transform -translate-y-1/2 text-zinc-600',slot === 'start' ? 'left-3' : 'right-3')}>
+          <div className={cn('absolute top-1/2 transform -translate-y-1/2 text-secondary-foreground',slot === 'start' ? 'left-3' : 'right-3')}>
             <Icon icon={icon} className='size-4' />
           </div>
         )}
@@ -22,7 +22,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
           {...props}
           ref={ref}
           type={type}
-          className={cn('flex h-10 w-full rounded-xl bg-zinc-50 text-zinc-500 px-3 py-2 text-xs file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-zinc-500 disabled:cursor-not-allowed disabled:opacity-70',slot === 'start' ? 'pl-10' : 'pr-10',isBordered && 'border border-zinc-100',className)}/>
+          className={cn('flex h-10 w-full rounded-xl bg-secondary text-secondary-foreground px-3 py-2 text-xs file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-accent-foreground disabled:cursor-not-allowed disabled:opacity-70',slot === 'start' ? 'pl-10' : 'pr-10',isBordered && 'border border-border',className)}/>
       </div>
     )
   }

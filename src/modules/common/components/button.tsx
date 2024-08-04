@@ -10,11 +10,11 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-zinc-900 text-zinc-50',
-        danger: 'bg-red-700 text-red-50',
-        outline: 'border border-border bg-white text-zinc-900',
-        secondary: 'bg-zinc-50 text-zinc-900',
-        ghost: 'bg-transparent border-none text-zinc-900'
+        primary: 'bg-primary text-primary-foreground',
+        danger: 'bg-destructive text-destructive-foreground',
+        outline: 'border border-border bg-background text-foreground',
+        secondary: 'bg-secondary text-secondary-foreground',
+        ghost: 'bg-transparent border-none text-foreground'
       },
       size: {
         default: 'h-10 rounded-lg px-4 py-2',
@@ -52,7 +52,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {isLoading && (
           <Icon
             icon='spinner'
-            className={cn('size-4', isLoading && 'animate-spin')}
+            className={cn('size-4 text-foreground', isLoading && 'animate-spin')}
           />
         )}
       </Comp>

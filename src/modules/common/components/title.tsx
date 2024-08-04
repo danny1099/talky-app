@@ -8,7 +8,7 @@ interface Props extends React.HTMLAttributes<HTMLHeadingElement> {
 /* prettier-ignore */
 export const Title = ({ text, ...props }: Props) => {
   return (
-    <h1 {...props} className={cn('text-2xl font-medium text-zinc-900',titleFont.className, props.className)}>
+    <h1 {...props} className={cn('text-2xl font-medium text-foreground',titleFont.className, props.className)}>
       {text}
     </h1>
   )

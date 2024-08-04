@@ -11,7 +11,7 @@ export default function MyDocuments() {
         </span>
       </div>
 
-      <article className="size-full flex flex-col bg-zinc-50 md:bg-white md:px-24"></article>
+      <article className="size-full flex flex-col bg-secondary md:bg-background md:px-24"></article>
     </section>
   )
 }

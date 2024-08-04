@@ -1,7 +1,7 @@
 import { cn } from '@/modules/common/utils'
 import { cva, type VariantProps } from 'class-variance-authority'
 
-const variants = cva('bg-zinc-100', {
+const variants = cva('bg-border', {
   variants: {
     type: {
       vertical: 'mx-2 w-[1px] h-full',
