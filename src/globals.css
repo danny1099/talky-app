@@ -20,11 +20,11 @@
   }
 
   .dark {
-    --background: rgb(2, 6, 23);
+    --background: rgb(30, 27, 75);
     --foreground: rgb(255, 255, 255);
     --primary: rgb(15 23 42);
     --primary-foreground: rgb(255, 255, 255);
-    --secondary: rgb(2, 6, 23);
+    --secondary: rgb(30, 27, 75);
     --secondary-foreground: rgb(255, 255, 255);
     --tertiary: rgb(59 7 100);
     --tertiary-foreground: rgb(255, 255, 255);

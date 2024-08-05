@@ -1,8 +1,13 @@
 import type { Config } from 'tailwindcss'
+import { nextui } from '@nextui-org/react'
 
 const config: Config = {
   darkMode: 'class',
-  content: ['./src/modules/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: [
+    './src/modules/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
+  ],
   theme: {
     extend: {
       colors: {
@@ -28,16 +33,11 @@ const config: Config = {
         destructive: {
           DEFAULT: 'var(--destructive)',
           foreground: 'var(--destructive-foreground)'
-        },
-        wine: {
-          '100': '#1d0e33',
-          '200': '#300e33',
-          '300': '#330e24'
         }
       }
     }
   },
-  plugins: [require('tailwindcss-animate')]
+  plugins: [require('tailwindcss-animate'), nextui()]
 } as Config
 
 export default config

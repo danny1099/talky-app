@@ -1,5 +1,11 @@
 {
   "intro": {
     "welcome": "Bienvenido a Talky!"
+  },
+  "documents": {
+    "title": "Hola, {name}!",
+    "description": "Estos son los documentos cargados en tu cuenta",
+    "empty_documents": "No hay documentos",
+    "search": "Escribe algo para buscar..."
   }
 }

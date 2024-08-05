@@ -5,7 +5,7 @@ export default function Layout({ children }: Children) {
     <div className="h-screen grid grid-cols-[auto_1fr] grid-rows-[auto_1fr]">
       <Navbar />
       <Sidebar />
-      <main className="row-start-2 size-full">{children}</main>
+      <main className="row-start-2 size-full overflow-hidden">{children}</main>
     </div>
   )
 }
