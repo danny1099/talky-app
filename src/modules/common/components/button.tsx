@@ -11,9 +11,10 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         primary: 'bg-primary text-primary-foreground',
+        secondary: 'bg-secondary text-secondary-foreground',
+        tertiary: 'bg-tertiary text-tertiary-foreground',
         danger: 'bg-destructive text-destructive-foreground',
         outline: 'border border-border bg-background text-foreground',
-        secondary: 'bg-secondary text-secondary-foreground',
         ghost: 'bg-transparent border-none text-foreground'
       },
       size: {

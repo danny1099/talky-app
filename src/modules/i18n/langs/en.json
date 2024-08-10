@@ -5,7 +5,11 @@
   "documents": {
     "title": "Hello, {name}!",
     "description": "These are your documents in your account",
-    "empty_documents": "No documents found",
     "search": "Type something to search..."
+  },
+  "empty": {
+    "title": "There isn't much content here yet",
+    "description": "Why don't you upload some files?",
+    "button": "Upload Document"
   }
 }

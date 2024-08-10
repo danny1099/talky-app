@@ -20,7 +20,7 @@
   }
 
   .dark {
-    --background: rgb(30, 27, 75);
+    --background: rgb(15 23 42);
     --foreground: rgb(255, 255, 255);
     --primary: rgb(15 23 42);
     --primary-foreground: rgb(255, 255, 255);
@@ -29,7 +29,7 @@
     --tertiary: rgb(59 7 100);
     --tertiary-foreground: rgb(255, 255, 255);
     --accent: rgb(10 10 10);
-    --accent-foreground: rgb(209 213 219);
+    --accent-foreground: rgb(156 163 175);
     --destructive: rgb(255, 255, 255);
     --destructive-foreground: rgb(255, 255, 255);
     --border: rgb(50, 50, 59);
