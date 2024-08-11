@@ -10,7 +10,7 @@ export default async function MyDocuments() {
       <div className="w-full flex flex-col px-4 py-2 md:px-24">
         <Title text={t('title', { name: 'Danny' })} />
         <Text content={t('description')} />
-        <span className="w-full flex mt-2 ml-[-2px] flex-col gap-y-4">
+        <span className="w-full flex mt-4 ml-[-2px] flex-col gap-y-4">
           <Input placeholder={t('search')} slot="end" icon="search" />
           <FilterTabs />
         </span>
