@@ -1,3 +1,6 @@
 export * from './filter-tabs'
 export * from './empty-files'
 export * from './upload-button'
+export * from './drop-content'
+export * from './drop-file'
+export * from './drop-zone'

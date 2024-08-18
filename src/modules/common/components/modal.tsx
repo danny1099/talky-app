@@ -24,7 +24,7 @@ export const Modal = ({ title, description, content, isOpen, setIsOpen }: Props)
               {description && <Dialog.DialogDescription>{description}</Dialog.DialogDescription>}
             </Dialog.DialogHeader>
           )}
-          <div className="min-h-60 p-1">{content}</div>
+          <div className="min-h-80">{content}</div>
         </Dialog.DialogContent>
         <Dialog.DialogClose />
       </Dialog.Dialog>
@@ -40,7 +40,7 @@ export const Modal = ({ title, description, content, isOpen, setIsOpen }: Props)
             {description && <Drawer.DrawerDescription>{description}</Drawer.DrawerDescription>}
           </Drawer.DrawerHeader>
         )}
-        <div className="min-h-80 p-4">{content}</div>
+        <div className="min-h-80">{content}</div>
       </Drawer.DrawerContent>
       <Drawer.DrawerClose />
     </Drawer.Drawer>

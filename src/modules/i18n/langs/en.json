@@ -11,5 +11,16 @@
     "title": "There isn't much content here yet",
     "description": "Try uploading some files to get started",
     "button": "Upload Document"
+  },
+  "dropzone": {
+    "title": "Upload your files",
+    "description": "The file to upload must be in PDF or DOC format",
+    "click-text": "Click to upload",
+    "drag-text": "or drop your file here",
+    "size-file": "File size up to 4MB",
+    "button": "Upload Document",
+    "file-not-accepted": "File type not accepted",
+    "file-too-large": "File too large",
+    "file-upload-error": "File upload error"
   }
 }

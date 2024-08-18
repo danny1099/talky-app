@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Toaster } from 'sonner'
 import { globalFont } from '@/config/fonts'
 import { ServerProviders, ClientProviders } from '@/lib/providers'
 import '@/globals.css'
@@ -14,6 +15,7 @@ export default function RootLayout({ children, params: { lang } }: Readonly<Prop
         <ServerProviders>
           <ClientProviders>{children}</ClientProviders>
         </ServerProviders>
+        <Toaster position="top-right" />
       </body>
     </html>
   )

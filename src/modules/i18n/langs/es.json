@@ -11,5 +11,16 @@
     "title": "Aquí no hay mucho contenido aún",
     "description": "Intenta subir algunos archivos para comenzar",
     "button": "Cargar Documento"
+  },
+  "dropzone": {
+    "title": "Subir Archivos",
+    "description": "El archivo a subir debe estar en formato PDF o DOC",
+    "click-text": "Click para seleccionar",
+    "drag-text": "o arrastra tu archivo",
+    "size-file": "Tamaño de archivo hasta 4MB",
+    "button": "Cargar Documento",
+    "file-not-accepted": "Tipo de archivo no aceptado",
+    "file-too-large": "Archivo demasiado grande",
+    "file-upload-error": "Error al cargar el archivo"
   }
 }
