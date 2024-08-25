@@ -30,3 +30,8 @@ export const fileType = (filename: string) => {
   const file = ACCEPTED_FILE_TYPES.find((f) => f.type === type)
   return file
 }
+
+export const fileExtension = (filename: string) => {
+  const type = extensionFile.exec(filename)![1]
+  return type
+}

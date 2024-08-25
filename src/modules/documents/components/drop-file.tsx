@@ -1,4 +1,4 @@
-import { Chip } from '@nextui-org/react'
+import { Chip, ChipProps } from '@nextui-org/react'
 import { Button, Icon, Text } from '@/modules/common/components'
 import { textCapitalize, readableFileSize } from '@/modules/common/utils'
 import { fileType } from '@/modules/documents/helpers'
@@ -8,6 +8,15 @@ interface Props {
   status: string
   action?: () => void
 }
+
+const colorStatus = {
+  pending: 'warning',
+  uploading: 'default',
+  success: 'success',
+  error: 'danger'
+}
+
+type FileStatus = keyof typeof colorStatus
 
 export const DropFile = ({ file, status, action }: Props) => {
   const fileIcon = fileType(file.name)
@@ -27,7 +36,11 @@ export const DropFile = ({ file, status, action }: Props) => {
       </div>
 
       <div className="h-full flex items-center justify-center px-2 gap-x-2">
-        <Chip color={`${status === 'pending' ? 'warning' : 'success'}`} size="sm" variant="flat">
+        <Chip
+          color={`${colorStatus[status as FileStatus]}` as ChipProps['color']}
+          size="sm"
+          variant="flat"
+        >
           {textCapitalize(status)}
         </Chip>
         <Button variant="ghost" size="icon" onClick={() => action?.()}>

@@ -1,6 +1,6 @@
 import { useLocale } from 'next-intl'
 
-const privateRoutes = {
+export const privateRoutes = {
   documents: 'private/ws/documents',
   chat: 'private/ws/chat',
   profile: 'private/ws/profile'

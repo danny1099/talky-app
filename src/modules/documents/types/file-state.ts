@@ -1,1 +1,1 @@
-export type FileStatus = 'idle' | 'pending' | 'success' | 'error'
+export type FileStatus = 'idle' | 'pending' | 'uploading' | 'success' | 'error'

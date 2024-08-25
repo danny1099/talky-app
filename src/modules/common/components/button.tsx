@@ -50,12 +50,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={isLoading}
       >
         {children}
-        {isLoading && (
-          <Icon
-            icon='spinner'
-            className={cn('size-4 text-foreground', isLoading && 'animate-spin')}
-          />
-        )}
+        {isLoading && <Icon icon='spinner' className={cn('size-4 animate-spin')}/>}
       </Comp>
     )
   }

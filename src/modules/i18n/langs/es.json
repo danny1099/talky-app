@@ -21,6 +21,8 @@
     "button": "Cargar Documento",
     "file-not-accepted": "Tipo de archivo no aceptado",
     "file-too-large": "Archivo demasiado grande",
-    "file-upload-error": "Error al cargar el archivo"
+    "file-no-selected": "No hay archivo seleccionado",
+    "file-upload-error": "Algo salio mal al cargar el archivo",
+    "file-upload-success": "Archivo cargado correctamente"
   }
 }

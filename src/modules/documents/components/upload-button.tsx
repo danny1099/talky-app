@@ -13,7 +13,7 @@ export const UploadButton = ({ children, ...props }: ButtonProps) => {
       <Modal
         isOpen={open}
         setIsOpen={setOpen}
-        content={<Dropzone />}
+        content={<Dropzone autoClose={() => setOpen(false)} />}
         title={t('title')}
         description={t('description')}
       />

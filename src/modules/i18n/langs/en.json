@@ -21,6 +21,8 @@
     "button": "Upload Document",
     "file-not-accepted": "File type not accepted",
     "file-too-large": "File too large",
-    "file-upload-error": "File upload error"
+    "file-no-selected": "No file selected",
+    "file-upload-error": "Something went wrong while uploading the file",
+    "file-upload-success": "File uploaded successfully"
   }
 }
