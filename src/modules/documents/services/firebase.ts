@@ -10,7 +10,8 @@ export const uploadFileDoc = async (formData: FormData): Promise<NewDocument> =>
   const file = formData.get('file') as File
   const fileName = textCapitalize(file.name)
   const fileExt = fileExtension(file.name)
-  
+  const fileWithoutExt = fileName.substring(0, fileName.lastIndexOf('.'))
+
   /* convert file to ArrayBuffer */
   const arrayBuffer = await file.arrayBuffer()
   const unit8Array = new Uint8Array(arrayBuffer)
@@ -25,7 +26,7 @@ export const uploadFileDoc = async (formData: FormData): Promise<NewDocument> =>
     url: fileUrl,
     pages: 0,
     format: fileExt as string,
-    filename: fileName,
+    filename: fileWithoutExt,
     created_at: snapshot.timeCreated,
   }
 

@@ -1,3 +1,4 @@
+import 'server-only'
 import { uuid } from 'short-uuid'
 import { v2 as cloudinary } from 'cloudinary'
 import { CLOUDINARY_KEY, CLOUDINARY_SECRET, CLOUDINARY_NAME } from '@/config/env'
@@ -14,9 +15,13 @@ cloudinary.config({
 export const uploadFilePDF = async (formData: FormData): Promise<NewDocument> => {
   const file = formData.get('file') as File
   const fileName = textCapitalize(file.name)
+  const fileWithoutExt = fileName.substring(0, fileName.lastIndexOf('.'))
+  
+  /* convert file to ArrayBuffer */
   const arrayBuffer = await file.arrayBuffer()
   const unit8Array = new Uint8Array(arrayBuffer)
 
+  /* upload file to cloudinary */
   return new Promise((resolve, reject) => {
     cloudinary
       .uploader
@@ -27,7 +32,7 @@ export const uploadFilePDF = async (formData: FormData): Promise<NewDocument> =>
             url: secure_url,
             pages,
             format,
-            filename: fileName,
+            filename: fileWithoutExt,
             created_at,
           } as NewDocument
 

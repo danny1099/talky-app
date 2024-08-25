@@ -1,9 +1,11 @@
-import { Title, Text, Input } from '@/modules/common/components'
-import { EmptyFiles, FilterTabs } from '@/modules/documents/components'
 import { getTranslations } from 'next-intl/server'
+import { Title, Text, Input } from '@/modules/common/components'
+import { EmptyFiles, FilterTabs, CardDocument } from '@/modules/documents/components'
+import { getAllDocuments } from '@/modules/documents/actions'
 
 export default async function MyDocuments() {
   const t = await getTranslations('documents')
+  const data = await getAllDocuments()
 
   return (
     <section className="bg-background size-full flex flex-col overflow-hidden">
@@ -16,8 +18,16 @@ export default async function MyDocuments() {
         </span>
       </div>
 
-      <article className="size-full flex flex-col bg-background md:px-24">
-        <EmptyFiles />
+      <article className="size-full flex flex-col bg-background overflow-hidden md:px-24">
+        <div className="size-full flex flex-col overflow-y-auto bg-secondary rounded-md">
+          {data?.length === 0 && <EmptyFiles />}
+
+          <ul className="w-full grid grid-cols-1 gap-3 p-4 md:grid-cols-2 md:p-2">
+            {data?.map((doc) => (
+              <CardDocument key={doc.id} {...doc} />
+            ))}
+          </ul>
+        </div>
       </article>
     </section>
   )

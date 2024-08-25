@@ -4,8 +4,8 @@ import { cva, type VariantProps } from 'class-variance-authority'
 const variants = cva('bg-border', {
   variants: {
     type: {
-      vertical: 'mx-2 w-[1px] h-full',
-      horizontal: 'my-2 h-[1px] w-full'
+      vertical: 'w-[1px] h-full',
+      horizontal: 'h-[1px] w-full'
     }
   },
   defaultVariants: {
