@@ -8,8 +8,8 @@ export const privateRoutes = {
 
 export type Route = keyof typeof privateRoutes
 
-export const getPrivateRoute = (route: Route) => {
+export const getPrivateRoute = (route: Route, withLocale = true) => {
   const locale = useLocale()
   const routePath = privateRoutes[route]
-  return `/${locale}/${routePath}`
+  return withLocale ? `/${locale}/${routePath}` : `/${routePath}`
 }

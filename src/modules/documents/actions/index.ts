@@ -1,6 +1,6 @@
 'use server'
 import { revalidatePath } from 'next/cache'
-import { collection, query, getDocs, addDoc } from 'firebase/firestore'
+import { collection, query, getDocs, addDoc, deleteDoc, doc } from 'firebase/firestore'
 import { uploadFilePDF, uploadFileDoc } from '@/modules/documents/services'
 import { filesAccepted, fileExtension } from '@/modules/documents/helpers'
 import { extractText } from '@/modules/documents/helpers/text-extractor'
@@ -52,6 +52,15 @@ export const getAllDocuments = async () => {
       })
     )
     return data
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export const deleteDocument = async (id: string) => {
+  try {
+    await deleteDoc(doc(db, 'documents', id))
+    revalidatePath('/private/ws/documents')
   } catch (error) {
     console.log(error)
   }

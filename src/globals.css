@@ -10,7 +10,7 @@
     --primary-foreground: rgb(255, 255, 255);
     --secondary: rgb(250, 250, 250);
     --secondary-foreground: rgb(24, 24, 27);
-    --tertiary: rgb(107, 33, 168);
+    --tertiary: rgb(59, 7, 100);
     --tertiary-foreground: rgb(255, 255, 255);
     --accent: rgb(250, 250, 250);
     --accent-foreground: rgb(113, 113, 122);
@@ -24,16 +24,16 @@
   .dark {
     --background: rgb(15 23 42);
     --foreground: rgb(255, 255, 255);
-    --primary: rgb(15 23 42);
+    --primary: rgb(21, 22, 24);
     --primary-foreground: rgb(255, 255, 255);
-    --secondary: rgb(30, 27, 75);
+    --secondary: rgb(6, 4, 27);
     --secondary-foreground: rgb(255, 255, 255);
-    --tertiary: rgb(59 7 100);
+    --tertiary: rgb(59, 7, 100);
     --tertiary-foreground: rgb(255, 255, 255);
     --accent: rgb(10 10 10);
-    --accent-foreground: rgb(156 163 175);
+    --accent-foreground: rgb(188, 194, 202);
     --muted: rgb(245, 245, 244);
-    --muted-foreground: rgb(102, 102, 102);
+    --muted-foreground: rgb(126, 122, 122);
     --destructive: rgb(255, 255, 255);
     --destructive-foreground: rgb(255, 255, 255);
     --border: rgb(50, 50, 59);
